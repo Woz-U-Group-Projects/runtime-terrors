@@ -1,12 +1,14 @@
 import './App.css';
-import TopBar from "./TopBar/topbar";
+import TopBar from "./Components/TopBar/topbar"
 import Home from "./Pages/home/home"
+import Single from "./Pages/Single/single"
 
 function App() {
   return (
 
     <>
     <TopBar />
+    {/* <Single /> */}
     <Home />
 
     </>

@@ -13,19 +13,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 500px;
+    font-size: 300px;
     color: #EA584F;
     object-fit: cover;
-}
+} 
 
 .headerTitleSmall {
-    position: absolute;
+    position: static;
     top: 18%;
     font-size: 20px;
 }
 
 .headerTitleLarge{
-    position: absolute;
+    position: static;
     top: 20%;
-    font-size: 100px;
+    font-size: 60px;
 }
