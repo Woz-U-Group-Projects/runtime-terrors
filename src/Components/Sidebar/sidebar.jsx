@@ -4,11 +4,8 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebarItem">
-                <span className="sidebarTitle">SEARCH</span>
-                <input className="searchBox" type="text" placeholder="Search Posts" />
-            </div>
-            <div className="sidebarItem">
                 <span className="sidebarTitle">Categories</span>
+                <input className="searchBox" type="text" placeholder="Search Posts" />
                 <ul className="sidebarList">
                     <li className="sidebarListItem">Politics</li>
                     <li className="sidebarListItem">Art</li>

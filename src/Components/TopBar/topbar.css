@@ -50,3 +50,26 @@
     font-weight: bolder;
 
 }
+
+.searchBox {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    width: 15vw;
+    align-self: left;
+    background-color: #D8C3A5;
+    color: black;
+}
+
+.searchBox:focus {
+    outline: none;
+}
+
+.topSearchIcon {
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.topImage {
+    padding-top: 5px;
+}

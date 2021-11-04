@@ -26,8 +26,9 @@ export default function TopBar() {
 
         </div>
             <div className="topRight">
+            <i className="topSearchIcon fas fa-search"></i>
+                 <input className="searchBox" type="text" placeholder="Search Posts" />
             <i className="topImage fas fa-user-ninja"></i>
-                <i className="topSearchIcon fas fa-search"></i>
             </div>
         </div>
     )

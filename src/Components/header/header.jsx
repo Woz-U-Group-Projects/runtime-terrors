@@ -7,7 +7,7 @@ export default function  Header() {
                 <span className="headerTitleSmall">WriteHereWriteNow</span>
                 <span className="headerTitleLarge">Your Journey Begins Write Here</span>
             </div>
-            <i class="pencilBack fas fa-pencil-alt"></i>
+            <i className="pencilBack fas fa-pencil-alt"></i>
          </div>
     )
 };
