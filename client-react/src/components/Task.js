@@ -162,16 +162,13 @@ import '../profile.css';
                           Username Pulled from DB
                         </h3>
                         <div className="h5 font-weight-300">
-                          <i className="ni location_pin mr-2" />Location pulled from DB
-                        </div>
-                        <div className="h5 mt-4">
-                          <i className="ni business_briefcase-24 mr-2" />Occupation pulled from DB
-                        </div>
-                        <div>
-                          <i className="ni education_hat mr-2" />Education pulled from DB
+                          <i className="ni location_pin mr-2" />Location tracked by location services
                         </div>
                         <hr className="my-4" />
-                        <p>Headings of previous blogs, clickable to actual blog page here. </p>
+                        <h3>
+                          A little about me
+                        </h3>
+                        <p>Input from about me ends up here</p>
                         <a href="#">Show more</a>
                       </div>
                     </div>
@@ -182,7 +179,7 @@ import '../profile.css';
                     <div className="card-header bg-white border-0">
                       <div className="row align-items-center">
                         <div className="col-8">
-                          <h3 className="mb-0">My account</h3>
+                          <h3 className="mb-0">Edit profile and settings</h3>
                         </div>
                         <div className="col-4 text-right">
                           <a href="#!" className="btn btn-sm btn-primary">Settings</a>
@@ -191,6 +188,14 @@ import '../profile.css';
                     </div>
                     <div className="card-body">
                       <form>
+                        {/* About me input */}
+                        <h6 className="heading-small text-muted mb-4">About me</h6>
+                        <div className="pl-lg-4">
+                          <div className="form-group focused">
+                            <textarea rows={4} className="form-control form-control-alternative" placeholder="A few words about you ..." defaultValue={""} />
+                          </div>
+                        </div>
+                        <hr className="my-4" />
                         <h6 className="heading-small text-muted mb-4">User information</h6>
                         <div className="pl-lg-4">
                           <div className="row">
@@ -223,45 +228,16 @@ import '../profile.css';
                           </div>
                         </div>
                         <hr className="my-4" />
-                        {/* Address */}
-                        <h6 className="heading-small text-muted mb-4">Contact information</h6>
+                        {/* password */}
+                        <h6 className="heading-small text-muted mb-4">Update Password</h6>
                         <div className="pl-lg-4">
                           <div className="row">
                             <div className="col-md-12">
                               <div className="form-group focused">
-                                <label className="form-control-label" htmlFor="input-address">Address</label>
-                                <input id="input-address" className="form-control form-control-alternative" placeholder="Home Address" type="text" />
+                                <label className="form-control-label" htmlFor="input-password">New Password</label>
+                                <input id="input-address" className="form-control form-control-alternative" placeholder="Must contain 8-15 characters" type="text" />
                               </div>
                             </div>
-                          </div>
-                          <div className="row">
-                            <div className="col-lg-4">
-                              <div className="form-group focused">
-                                <label className="form-control-label" htmlFor="input-city">City</label>
-                                <input type="text" id="input-city" className="form-control form-control-alternative" />
-                              </div>
-                            </div>
-                            <div className="col-lg-4">
-                              <div className="form-group focused">
-                                <label className="form-control-label" htmlFor="input-country">Country</label>
-                                <input type="text" id="input-country" className="form-control form-control-alternative" />
-                              </div>
-                            </div>
-                            <div className="col-lg-4">
-                              <div className="form-group">
-                                <label className="form-control-label" htmlFor="input-country">Postal code</label>
-                                <input type="number" id="input-postal-code" className="form-control form-control-alternative" placeholder="Postal code" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr className="my-4" />
-                        {/* Description */}
-                        <h6 className="heading-small text-muted mb-4">About me</h6>
-                        <div className="pl-lg-4">
-                          <div className="form-group focused">
-                            <label>About Me</label>
-                            <textarea rows={4} className="form-control form-control-alternative" placeholder="A few words about you ..." defaultValue={""} />
                           </div>
                         </div>
                       </form>
