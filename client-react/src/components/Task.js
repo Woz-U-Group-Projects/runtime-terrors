@@ -23,13 +23,13 @@ class Task extends React.Component {
     //let url = "http://localhost:5000/projects";
 
     // Express uses port 3001 (react uses 3000)
-    //let url = "http://localhost:3001/tasks";
+    let url = "http://localhost:3001/tasks";
     axios.get(url).then(response => this.setState({ tasks: response.data }));
   };
 
   addTask = () => {
     //uncomment and update url to appropriate url for backend connection
-    //let url = "http://localhost:3001/tasks";
+    let url = "http://localhost:3001/tasks";
     axios.post(url, { name: this.taskName.current.value }).then(response => {
       // refresh the data
       this.getData();
