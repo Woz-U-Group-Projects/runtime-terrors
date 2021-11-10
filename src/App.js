@@ -14,7 +14,7 @@ function App() {
     <Router>
     <TopBar />
     <Routes>
-      <Route exact path="/about" element={<Settings />} />
+      <Route exact path="/profile" element={<Settings />} />
       <Route exact path="/" element={<Home />} />
       <Route exact path="/write" element={<Write />} />
       <Route exact path="/post/:postId" element={<Single />} />

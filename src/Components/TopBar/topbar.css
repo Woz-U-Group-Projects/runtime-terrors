@@ -1,75 +1,12 @@
-
-.top{
-    width: 100%;
-    height: 100px;
-    background-color: #D8C3A5;
-    position: sticky;
-    top: 0;
-    align-items: center;
-    font-family: 'Zen Kurenaido', sans-serif; 
-    display: inline-flex;
-}
-
-.topLeft,.topRight{
-    flex: 3;
-}
-.topRight {
-    font-size: 25px;
-    margin: 20px;
-    padding: 0px;
-    display: flex;
-    justify-content: right;
-}
-
-.topCenter{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: right;
-}
-
-.topIcon {
-    
-    margin: 7px;
+.navbar {
+    font-family: "'Zen Kurenaido', sans-serif";
     font-size: 30px;
-}
-
-
-.topImage {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
-.topList {
-    justify-content: left;
-    margin: 0;
-    margin-left: 10px;
-    padding: 0;
-    list-style: none;
-    font-weight: bolder;
-
-}
-
-.searchBox {
-    border: none;
-    border-radius: 10px;
-    padding: 0;
-    width: 15vw;
-    align-self: left;
+    color: #E85A4F;
     background-color: #D8C3A5;
-    color: black;
 }
 
-.searchBox:focus {
-    outline: none;
-}
-
-.topSearchIcon {
-    padding-right: 20px;
-    padding-top: 5px;
-}
-
-.topImage {
-    padding-top: 5px;
+.pencilIcon {
+    font-size: 40px;
+    padding-left: 10px;
+    color: #E85A4F;
 }
