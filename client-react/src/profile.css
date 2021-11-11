@@ -669,13 +669,14 @@
     color: #fff;
     border-color: #8E8D8A;
     background-color: #8E8D8A;
+    margin: 5%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
   }
   
   .btn-info:hover {
     color: #fff;
-    border-color: #8E8D8A;
-    background-color: #8E8D8A;
+    border-color: #11cdef;
+    background-color: #11cdef;
   }
   
   .btn-info:focus {
@@ -707,8 +708,8 @@
   
   .btn-default:hover {
     color: #fff;
-    border-color: #E85A4F;
-    background-color: #E85A4F;
+    border-color: #11cdef;
+    background-color: #11cdef;
   }
   
   .btn-default:focus {
@@ -2031,4 +2032,11 @@
   #navbar .navbar {
     margin-bottom: 20px;
   }
+
+  textarea { 
+    height: auto; 
+    width: 100%;
+  }
+
+
   
