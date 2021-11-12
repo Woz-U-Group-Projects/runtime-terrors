@@ -1,7 +1,18 @@
+
 .navbar {
     font-family: "'Zen Kurenaido', sans-serif";
     font-size: 30px;
-    color: #E85A4F;
+    background-color: #D8C3A5 !important;
+}
+
+.nav-item {
+    background-color: #D8C3A5;
+    clear: both;
+}
+
+
+
+.navbar-brand {
     background-color: #D8C3A5;
 }
 
@@ -9,4 +20,30 @@
     font-size: 40px;
     padding-left: 10px;
     color: #E85A4F;
+    background-color: #D8C3A5;
+}
+
+.navbar-toggler-icon {
+    padding-right: 10px;
+}
+
+.navList {
+    margin-left: 50px;
+    background-color: #D8C3A5;
+}
+
+.categories {
+    background-color: #D8C3A5;
+    justify-items: right;
+}
+
+.btn-secondary {
+    background-color: #E85A4F !important;
+    color: rgba(0,0,0,.55) !important;
+}
+
+
+.searchButton {
+    border-radius: 10px;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 .header{
     margin-top: 60px;
+    background-color: #EAE7DC;
 }
 
 .headerTitles {
@@ -22,10 +23,21 @@
     position: static;
     top: 18%;
     font-size: 20px;
+    margin-top: 20px;
+    color: black;
 }
 
 .headerTitleLarge{
     position: static;
     top: 20%;
     font-size: 60px;
+    font-weight: bold;
+    color: black;
+}
+
+.headerImg {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 50px;
 }
