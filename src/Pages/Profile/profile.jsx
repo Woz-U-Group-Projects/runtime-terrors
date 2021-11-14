@@ -1,11 +1,7 @@
 import React from "react";
 import axios from "axios";
-<<<<<<< HEAD
-import '../task.min.css'
-=======
-import "../task.min.css";
-import "../profile.css";
->>>>>>> 45253513b87fcd7d03be3fb4b84633a808d2e82d
+import "./profile.css";
+import Sidebar from "../../Components/Sidebar/sidebar";
 class Task extends React.Component {
   constructor(props) {
     super(props);
@@ -18,10 +14,6 @@ class Task extends React.Component {
   }
 
   getData = () => {
-<<<<<<< HEAD
-
-=======
->>>>>>> 45253513b87fcd7d03be3fb4b84633a808d2e82d
     //UNCOMMENT the appropriate url for the backend framework
 
     // Java Spring Boot uses port 8080
@@ -31,24 +23,14 @@ class Task extends React.Component {
     //let url = "http://localhost:5000/projects";
 
     // Express uses port 3001 (react uses 3000)
-<<<<<<< HEAD
-    let url = "http://localhost:3001/tasks";
-    axios.get(url).then(response => this.setState({ tasks: response.data }));
-=======
     let url = "http://localhost:3000/tasks";
     axios.get(url).then((response) => this.setState({ tasks: response.data }));
->>>>>>> 45253513b87fcd7d03be3fb4b84633a808d2e82d
   };
 
   addTask = () => {
     //uncomment and update url to appropriate url for backend connection
-<<<<<<< HEAD
-    let url = "http://localhost:3001/tasks";
-    axios.post(url, { name: this.taskName.current.value }).then(response => {
-=======
     let url = "http://localhost:3000/tasks";
     axios.post(url, { name: this.taskName.current.value }).then((response) => {
->>>>>>> 45253513b87fcd7d03be3fb4b84633a808d2e82d
       // refresh the data
       this.getData();
       // empty the input
@@ -57,23 +39,6 @@ class Task extends React.Component {
   };
 
   //create update and delete functions to complete CRUD
-<<<<<<< HEAD
-
-
-  render() {
-    return (
-      <div>
-        <h3>List of tasks (React)</h3>
-        <input ref={this.taskName} />
-        <button type="button" className="btn btn-primary" onClick={this.addTask}>add</button>
-        <ul>
-          {this.state.tasks.map(p => (
-            <li key={p.taskid}>
-              {p.name} : { p.complete ? "complete" : "not complete" } <button type="button" className="btn btn-success">Complete</button><button type="button" className="btn btn-danger">Delete</button>
-            </li>
-          ))}
-        </ul>
-=======
   state = {
     editprofile: false,
     changeprofilepic: false,
@@ -95,57 +60,7 @@ class Task extends React.Component {
           rel="stylesheet"
         />
         <div className="main-content">
-          {/* Top navbar */}
-          <nav
-            className="navbar navbar-top navbar-expand-md navbar-dark"
-            id="navbar-main"
-          >
-            <div className="container-fluid">
-              {/* Form */}
-              <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-                <div className="form-group mb-0">
-                  <div className="input-group input-group-alternative">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fas fa-search" />
-                      </span>
-                    </div>
-                    <input
-                      className="form-control"
-                      placeholder="Search"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </form>
-              {/* User */}
-              <ul className="navbar-nav align-items-center d-none d-md-flex">
-                <a
-                  className="nav-link pr-0"
-                  href="#"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <div className="media align-items-center">
-                    <span className="avatar avatar-sm rounded-circle">
-                      <img
-                        alt="Image placeholder"
-                        src="https://i.pinimg.com/originals/b2/2c/0a/b22c0a139a3b32fe14db5ef85e3eb64f.jpg"
-                        className="rounded-circle"
-                      />
-                    </span>
-                    <div className="media-body ml-2 d-none d-lg-block">
-                      <span className="mb-0 text-sm  font-weight-bold">
-                        Username pulled from DB
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </ul>
-            </div>
-          </nav>
+                     
           {/* Header */}
           <div
             className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
@@ -168,7 +83,9 @@ class Task extends React.Component {
                     Welcome to WriteHereWriteNow!
                   </p>
                   <div>
+                      <a href="/">
                     <button className="btn btn-info">Homepage</button>
+                    </a>
                   </div>
                   <div>
                     <button className="btn btn-info" onClick={Handlechange}>
@@ -466,7 +383,6 @@ class Task extends React.Component {
           </div>
         </div>
         <footer className="footer"></footer>
->>>>>>> 45253513b87fcd7d03be3fb4b84633a808d2e82d
       </div>
     );
   }

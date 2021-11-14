@@ -1,33 +1,47 @@
-import "./singlePost.css"
+import "./singlePost.css";
+import { useLocation } from "react-router";
+import { useEffect, useState, Link } from "react";
+import axios from 'axios';
 
 export default function SinglePost() {
+    const location = useLocation()
+    const path = location.pathname.split("/")[2];
+    const [post, setPost] = useState({})
+
+    useEffect(() => {
+        const getPost = async () => {
+        const res = await axios.get("/posts/" + path);
+        setPost(res.data)
+    };
+
+    getPost()
+}, [path]);
     return (
         <div className="singlePost">
              <div className="singlePostWrapper">
+                 {post.photo &&
                  <img 
-                 src="https://media.cntraveler.com/photos/5b43c49098650440f2835b91/master/w_3776,h_2832,c_limit/Arashiyama-Bamboo-Grove-GettyImages-915795558.jpg" 
+                 src={post.photo} 
                  alt="" 
-                 className="singlePostImg"/>
+                 className="singlePostImg" /> }
+                 
 
                  <h1 className="singlePostTitle">
-                     Lorem ipsum dolor sit amet.
+                     {post.title}
                      <div className="singlePostEdit">
                      <i className="singlePostIcon fas fa-edit"></i>
                      <i className="singlePostIcon fa fa-trash"></i>
                      </div>
                      </h1>
                      <div className="singlePostInfo">
-                         <span className="singlePostAuthor">Author: <b>Tristan</b></span>
-                         <span className="singlePostDate"><b>1 Hour Ago</b></span>
+                         <span className="singlePostAuthor">
+                             Author:
+                             <Link to={`/?user=${post.username}`} className="link">
+                                 </Link> <b>{post.username}</b></span>
+                         <span className="singlePostDate">{new Date(post.createdA).toDateString()}<b></b></span>
                      </div>
-                     <p className="singlePostDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nisi, nam placeat perferendis voluptas exercitationem ipsum odit veritatis maiores, eum ullam quo aliquid adipisci ipsa. Consequuntur iusto amet praesentium!
+                     <p className="singlePostDesc">
+                         {post.desc}
                      </p>
              </div>
         </div>
