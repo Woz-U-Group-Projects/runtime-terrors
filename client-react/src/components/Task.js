@@ -2,6 +2,10 @@ import React from "react";
 import axios from "axios";
 import "../task.min.css";
 import "../profile.css";
+import { Addpost } from "./addpost/addpost";
+import { Dropdown } from "./dropdown/dropdown";
+
+
 class Task extends React.Component {
   constructor(props) {
     super(props);
@@ -53,7 +57,6 @@ class Task extends React.Component {
     const x = this.state.editprofile;
     const y = this.state.changeprofilepic;
     return (
-      
       <div>
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
@@ -67,19 +70,14 @@ class Task extends React.Component {
           >
             <div className="container-fluid">
               {/* Form */}
-              <form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+              <form className="form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div className="form-group mb-0">
                   <div className="input-group input-group-alternative">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fas fa-search" />
-                      </span>
-                    </div>
-                    <input
+                    {/* <input
                       className="form-control"
                       placeholder="Search"
                       type="text"
-                    />
+                    /> */}
                   </div>
                 </div>
               </form>
@@ -93,7 +91,9 @@ class Task extends React.Component {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
+                {/* Navbar Visible Contents*/}
                   <div className="media align-items-center">
+                    {/* Navbar profile pic */}
                     <span className="avatar avatar-sm rounded-circle">
                       <img
                         alt="Image placeholder"
@@ -101,12 +101,19 @@ class Task extends React.Component {
                         className="rounded-circle"
                       />
                     </span>
+                    {/* Navbar profile pic */}
                     <div className="media-body ml-2 d-none d-lg-block">
                       <span className="mb-0 text-sm  font-weight-bold">
                         Username pulled from DB
                       </span>
                     </div>
+                    
+                    <div>
+                      <Dropdown />
+                    </div>
+                  
                   </div>
+                {/* Navbar Visible Contenets*/}
                 </a>
               </ul>
             </div>
@@ -176,10 +183,12 @@ class Task extends React.Component {
                   <div className="card-body pt-0 pt-md-4">
                     <hr className="my-4" />
                     <hr className="my-4" />
-                    {
-                      y && (
-                        <div>
-                        <form className="btn btn-sm btn-default float-right" action="/action_page.php">
+                    {y && (
+                      <div>
+                        <form
+                          className="btn btn-sm btn-default float-right"
+                          action="/action_page.php"
+                        >
                           <input
                             type="file"
                             id="img"
@@ -189,10 +198,8 @@ class Task extends React.Component {
                           <input type="submit" />
                         </form>
                       </div>
-                  
-                            )
-                    }
-                    
+                    )}
+
                     <div className="row">
                       <div className="col">
                         <div className="card-profile-stats d-flex justify-content-center mt-md-5">
@@ -213,10 +220,6 @@ class Task extends React.Component {
                     </div>
                     <div className="text-center">
                       <h3>Username Pulled from DB</h3>
-                      <div className="h5 font-weight-300">
-                        <i className="ni location_pin mr-2" />
-                        Location tracked by location services
-                      </div>
                       <hr className="my-4" />
                       <h3>A little about me</h3>
                       <p>Input from about me ends up here</p>
@@ -398,30 +401,18 @@ class Task extends React.Component {
                     </div>
                   </div>
                   <div className="card-body">
-                  <div class="widget-post" aria-labelledby="post-header-title">
-                    <div>
-                        <h2>
-                          Create New Blog Post
-                        </h2>
-                      </div>
-                      <form>
+                    <div
+                      class="widget-post"
+                      aria-labelledby="post-header-title"
+                    >
                       <div>
-                        <h3>Title</h3>
-                        <textarea rows="1"></textarea>
-                        </div>
-                        <h3>Content</h3>
-                        <div>
-                        <textarea rows="10"></textarea>
-                        </div>
-                        <div>
-                          <div>
-                            <input type="file" accept="image/*" multiple/>
-                          </div>
-                          <div>
-                            <button className="btn btn-sm btn-default float-right">publish</button>
-                          </div>
-                        </div>
-                      </form>
+                        <h2>Create New Blog Post</h2>
+                      </div>
+                      {/* add post component */}
+                      <div>
+                        <Addpost />
+                      </div>
+                      {/* add post component */}
                     </div>
                   </div>
                 </div>
