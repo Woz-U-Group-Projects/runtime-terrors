@@ -1,8 +1,10 @@
 
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Context } from "../../Context/Context";
 import "./topbar.css";
+import { Dropdown}  from 'react-bootstrap';
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
@@ -32,15 +34,25 @@ export default function TopBar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/">
-              CATEGORIES
-            </Link>
-          </li>
-          <li className="topListItem">
             <Link className="link" to="/write">
               WRITE
             </Link>
           </li>
+          <Dropdown className="dropdownInfo">
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    CATEGORIES
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Comedy</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Nature</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Psychology</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Art</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Politics</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Music</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">DIY</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
           <li className="topListItem" onClick={handleLogout}>
             {user && "LOGOUT"}
           </li>
