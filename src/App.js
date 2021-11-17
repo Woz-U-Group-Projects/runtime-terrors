@@ -4,7 +4,7 @@ import Home from "./Pages/home/home"
 import Single from "./Pages/Single/single"
 import Write from "./Pages/Write/write"
 import Task from "./Pages/Profile/profile"
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
+import {BrowserRouter as Router, Route, Routes, Switch} from "react-router-dom"
 import Login from "./Pages/Login/login"
 import Register from "./Pages/Register/register"
 import {useContext} from "react";
@@ -13,21 +13,22 @@ import { Context } from "./Context/Context";
 function App() {
   const { user } = useContext(Context);
   return (
-<div className="App">
     <Router>
-    <TopBar />
-    <Routes>
-      <Route exact path="/profile" element={<Task />} />
-      <Route exact path="/posts" element={<Home />} />
-      <Route exact path="/write" element={<Write />} />
-      <Route exact path="/post/:postId" element={<Single />} />
-      <Route exact path="/register" element={<Register />} />
-      <Route exact path="/login" element={<Login />} />
-    </Routes>
+      <TopBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/register">{user ? <Home /> : <Register />}</Route>
+        <Route path="/login">{user ? <Home /> : <Login />}</Route>
+        <Route path="/write">{user ? <Write /> : <Register />}</Route>
+        <Route path="/profile">{user ? <Task /> : <Register />}</Route>
+        <Route path="/post/:postId">
+          <Single />
+        </Route>
+      </Switch>
     </Router>
-    </div>
   );
 }
 
 export default App;
-
