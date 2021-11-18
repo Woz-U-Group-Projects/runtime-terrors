@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./profile.css";
-import Sidebar from "../../Components/Sidebar/sidebar";
+
+
 class Task extends React.Component {
   constructor(props) {
     super(props);

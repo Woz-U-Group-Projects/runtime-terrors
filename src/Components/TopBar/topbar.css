@@ -76,3 +76,9 @@
     outline: none;
     box-shadow: none;
   }
+
+.logoutButton {
+  margin-left: 20px;
+  color: black;
+
+}

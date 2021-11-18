@@ -53,14 +53,14 @@ export default function TopBar() {
     <Dropdown.Item href="#/action-3">DIY</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
-          <li className="topListItem" onClick={handleLogout}>
+          <li className="logoutButton topListItem" onClick={handleLogout}>
             {user && "LOGOUT"}
           </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <Link to="/settings">
+          <Link to="/profile">
             <img className="topImg" src={PF+user.profilePic} alt="" />
           </Link>
         ) : (

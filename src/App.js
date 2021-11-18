@@ -23,8 +23,7 @@ function App() {
         <Route path="/login">{user ? <Home /> : <Login />}</Route>
         <Route path="/write">{user ? <Write /> : <Register />}</Route>
         <Route path="/profile">{user ? <Task /> : <Register />}</Route>
-        <Route path="/post/:postId">
-          <Single />
+        <Route path="/post/:postId"> <Single />
         </Route>
       </Switch>
     </Router>
