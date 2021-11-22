@@ -1640,6 +1640,8 @@
   .footer {
     padding: 2.5rem 0;
     background: #f7fafc;
+    display: flex;
+    justify-content: center;
   }
   
   .footer .nav .nav-item .nav-link {
@@ -2038,5 +2040,46 @@
     width: 100%;
   }
 
+  .imageContainer {
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+  }
 
+  .logout {
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    margin: 10%;
+  }
+  .logout2 {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+  }
+
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .fakeimg {
+    background-color: #aaa;
+    width: 60%;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .edit-profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: .375rem;
+    background-color: #fff;
+    background-clip: border-box;
+  }
   
